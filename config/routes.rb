@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root 'posts#index'
   get 'posts/index'
   get 'user_posts/:user_id' => 'posts#user', as: :user_posts
-  resources :posts
+  resources :posts do
+    resources :likes
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
