@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'posts#index'
-  get 'posts/index'
   get 'user_posts/:user_id' => 'posts#user', as: :user_posts
   resources :posts do
     resources :likes
