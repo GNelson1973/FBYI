@@ -1,14 +1,21 @@
-<h1><%= @user.handle %></h1>
+<h1><%= @user.handle.capitalize %></h1>
 <br>
 <% @posts.each do |post| %>
   <h4><%= post.content %></h4>
 <% end %>
 
 <br>
-<h1>likes</h1>
+<h1>likes on others</h1>
 <br>
 <% @likes.each do |like| %>
   <% if like.post.user_id != @user.id %>
+    <h4><%= like.post.content %></h4>
+  <% end %>
+<% end %>
+<br>
+<h1>likes on own</h1>
+<% @likes.each do |like| %>
+  <% if like.post.user_id == @user.id %>
     <h4><%= like.post.content %></h4>
   <% end %>
 <% end %>
