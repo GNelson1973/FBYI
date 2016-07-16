@@ -1,6 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.guest_home {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(http://bit.ly/2a68y6U);
+  background-size: cover;
+}
+
 .center-block {
   display: block;
   margin-left: auto;
@@ -8,5 +15,5 @@
 }
 
 main {
-  padding-top: 80px;
+  padding-top: 20px;
 }

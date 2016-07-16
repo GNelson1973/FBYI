@@ -1,9 +1,13 @@
 <% if can? :create, Post %>
+<main class="container col-md-10 col-md-offset-3">
   <%= render "form" %>
   <br>
   <%= render @posts %>
+</main>
 <% end %>
 
 <% if !can? :create, Post %>
+<div class="guest_home">
 <p>Hello guest</p>
+</div>
 <% end %>
