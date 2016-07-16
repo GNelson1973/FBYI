@@ -10,7 +10,6 @@ class LikesController < ApplicationController
       authorize! :destroy, like
       like.save
     end
-
       redirect_to posts_path
   end
 

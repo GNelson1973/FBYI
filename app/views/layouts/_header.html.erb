@@ -2,9 +2,11 @@
   <div class="container">
     <%= link_to "FBYI", '/', class: "navbar-brand" %>
     <nav>
+      <% if can? :create, Post %>
       <ul class="nav navbar-nav">
         <li><%= link_to "Posts", posts_path %></li>
       </ul>
+      <% end %>
       <ul class="nav navbar-nav navbar-right">
         <% if !user_signed_in? %>
             <li><%= link_to "Log In", new_user_session_path %></li>

@@ -1,6 +1,9 @@
 <% if can? :create, Post %>
   <%= render "form" %>
   <br>
-  <% end %>
+  <%= render @posts %>
+<% end %>
 
-<%= render @posts %>
+<% if !can? :create, Post %>
+<p>Hello guest</p>
+<% end %>
