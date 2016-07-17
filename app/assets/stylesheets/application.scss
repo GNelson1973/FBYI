@@ -6,7 +6,80 @@
   width: 100vw;
   background-image: url(http://bit.ly/2a68y6U);
   background-size: cover;
+}
 
+.border_msg {
+  display: block;
+  height: 300px;
+  width: 330px;
+  position: fixed;
+  top: 120px;
+  left: 180px;
+}
+
+.guest_msg1 {
+  display: block;
+  height: 35px;
+  width: 130px;
+  background-color: white;
+  position: relative;
+  top: 30px;
+  left: 20px;
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-family: Helvetica;
+}
+
+.guest_msg2 {
+  height: 35px;
+  width: 135px;
+  background-color: white;
+  position: relative;
+  top: 50px;
+  left: 20px;
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-family: Helvetica;
+  display: block;
+}
+
+.guest_msg3 {
+  height: 35px;
+  width: 245px;
+  background-color: white;
+  position: relative;
+  top: 70px;
+  left: 20px;
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-family: Helvetica;
+  display: block;
+}
+
+.signup_btn {
+    position: relative;
+    top: 190px;
+    left: 20px;
+    font-size: 28px;
+    border: 2px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    color: red;
+}
+
+.signup_btn a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+    color: red;
+}
+
+.signup_btn a:hover {
+    text-color: white;
 }
 
 .notice_nav {
