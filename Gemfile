@@ -28,6 +28,7 @@ gem 'cancancan'
 gem 'devise', '~> 3.5'
 
 gem 'carrierwave'
+gem 'cloudinary'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
