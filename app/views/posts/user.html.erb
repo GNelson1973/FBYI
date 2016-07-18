@@ -1,23 +1,20 @@
-<main class="container col-md-10 col-md-offset-4">
-<h1><%= @user.handle.capitalize %></h1>
+<main class="container col-md-10 col-md-offset-3">
+<div class="col-xs-8">
+<h1>Yours</h1>
 <br>
 <% @posts.each do |post| %>
   <h4><%= post.content %></h4>
+  <div class="thumbnail" ><%= image_tag post.image_url.to_s %> </div>
 <% end %>
 
 <br>
-<h1>likes on others</h1>
+<h1>Others</h1>
 <br>
 <% @likes.each do |like| %>
   <% if like.post.user_id != @user.id %>
     <h4><%= like.post.content %></h4>
+    <div class="thumbnail" ><%= image_tag like.post.image_url.to_s %> </div>
   <% end %>
 <% end %>
-<br>
-<h1>likes on own</h1>
-<% @likes.each do |like| %>
-  <% if like.post.user_id == @user.id %>
-    <h4><%= like.post.content %></h4>
-  <% end %>
-<% end %>
+</div>
 </main>
