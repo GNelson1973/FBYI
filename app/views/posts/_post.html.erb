@@ -1,8 +1,6 @@
 <div class="col-xs-8">
   <p>
     <h4><%= post.content %></h4>
-    <div class="thumbnail" ><%= image_tag post.image_url.to_s %> </div>
-
     <% liked = Like.find_by( post: post, user: current_user ) != nil %>
     <% btn_color = liked ? "warning" : "default" %>
     <% action = liked ? :destroy : :create %>
@@ -15,4 +13,5 @@
       <%= link_to post.user.handle, user_posts_path( post.user ) %>
     </em>
   </p>
+    <div class="thumbnail" ><%= image_tag post.image_url.to_s %> </div>
 </div>
