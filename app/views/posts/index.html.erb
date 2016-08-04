@@ -1,11 +1,13 @@
 <% if !can? :create, Post %>
 <div class="guest_home">
-  <div class="guest_msg4"><%= link_to new_user_registration_url, class: "signup_btn" do %>
-          Sign Up <em>Here</em><% end %></div>
+  <%= link_to new_user_session_path, class: "signin_btn" do %>
+          Sign In<% end %>
   <div class="border_msg">
     <div class="guest_msg1">Hi stranger<em>!</em></div>
     <div class="guest_msg2">Don't be shy</div>
     <div class="guest_msg3">Share your <em><strong>fashion</strong></em> style</div>
+    <%= link_to new_user_registration_url, class: "signup_btn" do %>
+            Sign Up <em>Here</em><% end %>
   </div>
 </div>
 <% end %>
